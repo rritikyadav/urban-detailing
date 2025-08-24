@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Detailing</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="actualbody">
+            <div id="nav" class="hidden">
+                <img id="close" src="./assets/cross.svg" alt="">
+                <div class="mobilenavitem"><a href="./index.html">Home</a></div>
+                <div class="mobilenavitem"><a href="./services.html">Services</a></div>
+                <div class="mobilenavitem"><a href="./ourwork.html">Our Work</a></div>
+                <div class="mobilenavitem"><a href="./contactus.html">Contact Us</a></div>
+                <div class="mobilenavitem"><a href="./aboutus.html">About Us</a></div>
+            </div>
+
+            <div style="z-index: 99;">
+                <img id="threedots" src="./assets/tick.svg" alt="">
+            </div>
+        <nav onmouseleave="closeDropdown()">
+            <ul>
+                <li class="navitem"> <a href="./index.html">Home</a> </li>
+                <li class="navitem"> <a href="./services.html">Services</a> </li>
+                <!-- <li class="navitem" onmouseover="triggerDropdown(this)">Services <img src="./assets/down.svg" class="down"></li> -->
+                <li class="navitem" onmouseover="closeDropdown()"> <a href="./ourwork.html">Our Work</a> </li>
+                <li class="navitem" onmouseover="closeDropdown()"> <a href="./contactus.html">Contact Us</a> </li>
+                <!-- <li class="navitem" onmouseover="closeDropdown()"> <a href="#">Locate Us</a> </li> -->
+                <li class="navitem" onmouseover="closeDropdown()"> <a href="./aboutus.html">About Us</a> </li>
+            </ul>
+
+            <div id="dropdown">
+
+            </div>
+
+        </nav>
+        <img src="./assets/pixelcut-export.png" id="homelogo">
+
+        <div id="search">
+            <input type="text" placeholder="Search">
+            <img src="./assets/search.svg" alt="">
+        </div>
+
+        <div id="textbox">
+            <div>show your car some love</div>
+        </div>
+
+        <div id="videocontainer" style="width: 100%;overflow-x: hidden;">
+            <video id="backgroundvideo" autoplay="" muted="" loop="" 
+                data-video="0">
+                <!-- <source src="https://www.detailingdevils.com/assets/video/website/headlightrestoration.mp4"
+                    type="video/mp4"> -->
+                <source src="./assets/Covervideo3.mov"
+                    type="video/mp4">
+                <!-- <source src="./assets/OK.mp4" type="video/mp4"> -->
+            </video>
+        </div>
+
+        <div class="banner">
+
+            <div class="flexcontainer">
+
+                <h1>Services We Offer</h1>
+                <p>At Urban Detailing, we offer comprehensive exterior and interior detailing to enhance and protect your vehicle. Our services include clay wash for contaminant removal, premium wash for a spotless finish, rubber and tire dressings for UV protection and shine, and ceramic wax for a high-gloss finish. We also provide alloy wheel polishing, decontamination and surface treatment, steam cleaning, engine dressing, and headlight polishing for improved safety and appearance.</p>
+                <a href="./services.html">Know More About Our Services ></a>
+            </div>
+            <img src="./assets/14Services.jpeg" alt="">
+
+        </div>
+
+      
+
+        <div id="formdiv">
+            <div class="message">
+                <h1>For Services Related Queries</h1>
+                <p>Got a question or something you'd like to ask? Feel free to reach out to us using the form.</p>
+                <!-- <img src="./assets/Logo Red.png" alt="Logo" /> -->
+            </div>
+            <form>
+                <div class="inputWrap">
+                    <input type="text" class="inputField" autocomplete="on" id="contactPageName" required />
+                    <label for="name">Name</label>
+                </div>
+                <div class="inputWrap">
+                    <input type="email" class="inputField" autocomplete="on" id="contactPageEmail" required />
+                    <label id="contactPageEmailLabel" for="email">Email</label>
+                </div>
+                <div class="inputWrap">
+                    <input type="tel" class="inputField" autocomplete="on" id="contactPageMobile" required />
+                    <label id="contactPageMobileLabel" for="tel">Mobile</label>
+                </div>
+                <div class="inputWrap">
+                    <textarea name="message" class="input-textarea" id="contactPageMessage" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <div class="submitWrap">
+                    <input type="submit" value="" id="contactPageSubmitButton" class="sendBtn" />
+                    <div class="sendLabel" onclick="submitForm()">
+                        <img id="contactPageSubmitBtnImg" src="./assets/send.svg" alt="" />
+                        <h1 id="contactPageSubmitBtnText">Send</h1>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="cardDiv">
+        <h1>Glimpse Of Our Works</h1>
+        <div id="cards">
+            <div class="card" style="background-image: url(./assets/Ppfcard.jpg);" onclick="goToService(this)">
+                <div class="image">
+                </div>
+                <div class="textContent">
+                    <h2>Paint Protection Film</h2>
+                    <div class="gyan">PPF (Paint Protection Film) shields vehicles from scratches, stains, and UV damage, enhancing durability and maintaining looks for our shop's automotive clientele.</div>
+                    <!-- <button>View</button> -->
+                </div>
+            </div>
+
+            <div class="card" style="background-image: url(./assets/ceramiccard.jpeg);" onclick="goToService(this)">
+                <div class="image">
+                </div>
+                <div class="textContent">
+                    <h2>Ceramic Coating</h2>
+                    <div class="gyan">Ceramic coating enhances vehicle durability, repels dirt, and provides UV protection, preserving shine and reducing maintenance for our shop's automotive customers.</div>
+                    <!-- <button>View</button> -->
+                </div>
+            </div>
+
+            <div class="card" style="background-image: url(./assets/wrappingcard.jpeg);" onclick="goToService(this)">
+                <div class="image">
+                </div>
+                <div class="textContent">
+                    <h2>Wrapping</h2>
+                    <div class="gyan">Vehicle wrapping offers customizable designs, protects paint, and supports branding, catering to styles and preferences for our shop's automotive clients.</div>
+                    <!-- <button>View</button> -->
+                </div>
+            </div>
+            <div class="card" style="background-image: url(./assets/CeramicThar.jpg);" onclick="goToService(this)">
+                <div class="image">
+                </div>
+                <div class="textContent">
+                    <h2>Other Services</h2>
+                    <div class="gyan">Rubbing, drum painting, and car wash services maintain vehicle appearance and longevity, ensuring customer satisfaction at our automotive shop.</div>
+                    <!-- <button>View</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="pagebreak"></div> -->
+    <footer style="margin-top: 7rem;">
+        <div id="flexrow">
+            <div class="flexcol">
+                <div id="footericon"><img src="./assets/pixelcut-export.png" alt=""></div>
+                <div id="footersocials">
+                    <div class="footersocial"><a target="_blank" href="https://www.instagram.com/_urban__detailing/"><img src="./assets/instagram.png" alt=""></a></div>
+                    <div class="footersocial"><a target="_blank" href="https://wa.me/+918383084878"><img src="./assets/whatsapp.png" alt=""></a></div>
+                    <div class="footersocial"><a target="_blank" href="https://www.facebook.com/UrbanDetailing0"><img src="./assets/facebook.png" alt=""></a></div>
+                    <div class="footersocial"><a target="_blank" target="_blank" href="https://www.google.com/maps/place/Urban+Detailing/@28.4014441,77.0158795,17z/data=!3m1!4b1!4m6!3m5!1s0x390d2394bfd50957:0x3660d61e1f17278e!8m2!3d28.4014441!4d77.0184544!16s%2Fg%2F11svvvg25t?entry=ttu"><img src="./assets/pdcopy.svg" alt=""></a></div>
+                </div>
+            </div>
+            <div class="flexcol">
+                    <div class="footerheading">Contact Us:</div>
+                    <div class="contactmethods">
+                        <div class="contacticon"><img src="./assets/landline.svg" alt=""></div>
+                        <div class="contactText"><a href="tel:83830 84878">Call Us: 8383084878</a></div>
+                    </div>
+                    <div class="contactmethods">
+                        <div class="contacticon"><img src="./assets/whatsapp.svg" alt=""></div>
+                        <div class="contactText" id="phones"> <a target="_blank" href="https://wa.me/+919999525297">Text Us: 9999525297</a></div>
+                    </div>
+                    <div class="contactmethods">
+                        <div class="contacticon"><img src="./assets/email.svg" alt=""></div>
+                        <div class="contactText" id="emails"><a target="_blank" href="mailto:urbandetailing29@gmail.comsubject=Mere%20Dikkat%20Ho%20Rhi%20Hai&body=Message" style="text-transform: none;">Email Us: urbandetailing29@gmail.com</a></div>
+                    </div>
+                    <div class="contactmethods">
+                        <div class="contacticon"><img src="./assets/pindrop.svg" alt=""></div>
+                        <div class="contactText"><a target="_blank" target="_blank" href="https://www.google.com/maps/place/Urban+Detailing/@28.4014441,77.0158795,17z/data=!3m1!4b1!4m6!3m5!1s0x390d2394bfd50957:0x3660d61e1f17278e!8m2!3d28.4014441!4d77.0184544!16s%2Fg%2F11svvvg25t?entry=ttu">Sector-71, SPR Road, near M3M Broadway, Gurugram</a></div>
+                    </div>
+                    <div class="contactmethods" onclick="queryHBhaiKo()">
+                        <div class="contacticon" ><img src="./assets/enquire.svg" alt=""></div>
+                        <div class="contactText" onclick="queryHBhaiKo()">Have An Enquiry?</div>
+                    </div>
+            </div>
+
+            <div class="flexcol">
+                    <div class="footerheading">Our Services:</div>
+                    <div class="servicemethods">
+                        <div class="contacticon"><img src="./assets/side.svg" alt=""></div>
+                        <div class="contactText">Paint Protection Film</div>
+                    </div>
+                    <div class="servicemethods">
+                        <div class="contacticon"><img src="./assets/side.svg" alt=""></div>
+                        <div class="contactText">Ceramic Coating</div>
+                    </div>
+                    <div class="servicemethods">
+                        <div class="contacticon"><img src="./assets/side.svg" alt=""></div>
+                        <div class="contactText">Engine Dressing</div>
+                    </div>
+                    <div class="servicemethods">
+                        <div class="contacticon"><img src="./assets/side.svg" alt=""></div>
+                        <div class="contactText">Wrapping</div>
+                    </div>
+                    <div class="servicemethods">
+                        <div class="contacticon"><img src="./assets/side.svg" alt=""></div>
+                        <div class="contactText">maintenance Wash</div>
+                </div>
+            </div>
+            <div class="flexcol">
+                <img src="./assets/clock.svg" alt="">
+                <strong>Open Hours</strong>
+                <p>From 9am to 6pm</p>
+                <p>All Days</p>
+            </div>
+        </div>
+    </footer>
+     
+        <div id="blurDiv">
+            <div id="formdiv1">
+                <div class="message">
+                    <h1>For Services Related Queries</h1>
+                    <p>Got a question or something you'd like to ask? Feel free to reach out to us using the form.</p>
+                    <!-- <img src="./assets/Logo Red.png" alt="Logo" /> -->
+                </div>
+                <form>
+                    <div class="inputWrap">
+                        <input type="text" class="inputField" autocomplete="on" id="contactPageName1" required />
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="inputWrap">
+                        <input type="email" class="inputField" autocomplete="on" id="contactPageEmail1" required />
+                        <label id="contactPageEmailLabel" for="email">Email</label>
+                    </div>
+                    <div class="inputWrap">
+                        <input type="tel" class="inputField" autocomplete="on" id="contactPageMobile1" required />
+                        <label id="contactPageMobileLabel" for="tel">Mobile</label>
+                    </div>
+                    <div class="inputWrap">
+                        <textarea name="message" class="input-textarea" id="contactPageMessage1" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <div class="submitWrap">
+                        <input type="submit" value="" id="contactPageSubmitButton1" class="sendBtn" />
+                        <div class="sendLabel" onclick="submitForms()">
+                            <img id="contactPageSubmitBtnImg1" src="./assets/send.svg" alt="" />
+                            <h1 id="contactPageSubmitBtnText1">Send</h1>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+    <script src="./formsubmission.js"></script>
+    <script src="./formlogic.js"></script>
+
+</body>
+
+</html>

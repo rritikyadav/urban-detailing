@@ -1,0 +1,270 @@
+li{
+    list-style: none;
+}
+
+*{
+    font-family: 'Plus Jakarta Sans';
+    margin: 0;
+    text-transform: capitalize;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+nav{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    width: 65svw;
+    margin-left: 35svw;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+}
+    
+nav a{
+    text-decoration: none;
+    color: whitesmoke;
+    z-index: 99;
+}
+
+ul{
+    padding: 10px;
+    width: 100%;
+    border-radius: 3svh 0 0 3svh;
+    background-color:black;
+    /* background-color: rgba(red, green, blue, 1.63);
+    backdrop-filter: blur(10px); */
+    color: whitesmoke;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-around;
+    height: 6svh;
+    /* border: 2px solid; */
+    box-shadow: 2px 2px 5px black;
+}
+
+li{
+    border-radius: 1.3rem;
+    padding: 5px 10px;
+    font-weight: 1000;
+    font-size: 1.3rem;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 2px 2px 5px black; */
+    transition: transform 0.3s ease-in-out;
+}
+
+#dropdown{
+    transition: padding 0.1s, height 0.5s;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+    padding: 0px 20px;
+    width: 25%;
+    border-radius: 3svh ;
+    height: 0svh;
+}
+
+#dropdown.show{
+    padding: 10px 20px;
+    transition: padding 0.1s, height 0.5s;
+    height: 10svh;
+}
+li:hover{
+    cursor: pointer;
+    /* background-color: rgba(186, 186, 186,0.35); */
+    transform: scale(1.35);
+}
+
+.down{
+    /* display: none; */
+    margin-top: 3px;
+    height: 16px;
+}
+
+#search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 90;
+    position: absolute;
+    padding: 3px 20px;
+    top: 80px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 1.5rem;
+
+}
+input{
+    background-color:black;
+    color: white;
+    width: 340px;
+    padding: 5px 0px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    height: 2.7rem;
+    border-radius: 1.3rem;
+    text-transform: none;
+}
+
+input::placeholder{
+    color: rgb(215, 215, 215);
+}
+#homelogo{
+    height: 11rem;
+    z-index: 90;
+    position: fixed;
+    top: 45px;
+    left: 10svw;
+    scale: 1.1;
+    transition: all 0.5s cubic-bezier(0.06, 1.25, 1, 1);
+}
+
+#homelogo:hover{
+    scale: 1.12;
+}
+
+.bgcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:80vh;
+    background-image: url(./assets/servicebg.jpg);
+    /* object-fit: contain; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top left ;
+ } 
+
+ .bgcontainer h1{
+    font-size: 5rem;
+ }
+/* .aboutus{
+    color:black;
+    font-size:120px;
+    font-weight: bolder;
+    position: absolute;
+    right:500px;
+    top:250px;
+    transform: rotate(-10deg);
+    display:flex;
+    gap:25px;
+}
+.us{
+    color:white;
+} */
+.whatareweheading{
+    color:rgb(208, 4, 4);
+    margin:60px 0px;
+    text-align: center;
+    font-size: 30px;
+}
+.whatarewe{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    gap:30px;
+    color:white;
+    margin:70px auto;
+    height:40vh;
+    width:80vw;
+}
+.whatareweimg{
+    width:50%;
+    height:40vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.whatarewetext{
+    width:50%;
+    height:40vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.whatareweimg img{
+    width:30vw;
+    height:40vh;
+    border-radius:10%;
+}
+
+.why{
+    margin-top:8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5vh;
+
+}
+.text{
+    color:rgb(208,4,4);
+    font-size: 30px;
+}
+
+.grid{
+    width:70vw;
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* gap:5vw; */
+    justify-items: center;
+    align-items: center;
+}
+.gridbox{
+    color:white;
+    width:22vw;
+    height:30vh;
+    border-radius: 10%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    background-color:black;
+    transition:background-color 0.7s ease-out;
+}
+.gridbox:hover{
+    background-color: rgb(208,4,4);
+}
+
+h1{
+    color: whitesmoke;
+}
+.gridtext{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+    width:80%;
+    word-break: break-all;
+}
+
+.gridbox:hover > .gridimg{
+    transform:rotate(360deg);
+}
+.gridimg{
+ 
+    transform:rotate(0deg);
+    transition :transform 0.5s ease-in-out;
+}
+
+.gridimg img{
+    filter: invert(1); 
+    height: 50px;
+}
+
+.gridtext{
+    text-align: center;
+}

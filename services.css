@@ -1,0 +1,390 @@
+li{
+    list-style: none;
+}
+
+*{
+    font-family: 'Plus Jakarta Sans';
+    margin: 0;
+    /* text-transform: capitalize; */
+    padding: 0;
+    box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+
+h1{
+    text-transform: capitalize;
+}
+nav{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    width: 65svw;
+    margin-left: 35svw;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+}
+    
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+ul{
+    padding: 10px;
+    width: 100%;
+    border-radius: 3svh 0 0 3svh;
+    background-color: #101010;
+    backdrop-filter: blur(10px);
+    color: black;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-around;
+    height: 6svh;
+    /* border: 2px solid; */
+    box-shadow: 2px 2px 5px black;
+}
+
+li{
+    border-radius: 1.3rem;
+    padding: 5px 10px;
+    font-weight: 1000;
+    font-size: 1.3rem;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 2px 2px 5px black; */
+    transition: transform 0.3s ease-in-out;
+}
+
+#dropdown{
+    transition: padding 0.1s, height 0.5s;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+    padding: 0px 20px;
+    width: 25%;
+    border-radius: 3svh ;
+    height: 0svh;
+}
+
+#dropdown.show{
+    padding: 10px 20px;
+    transition: padding 0.1s, height 0.5s;
+    height: 10svh;
+}
+li:hover{
+    cursor: pointer;
+    background-color: #252525;
+    transform: scale(1.15);
+}
+
+.down{
+    /* display: none; */
+    margin-top: 3px;
+    height: 16px;
+}
+
+#search{
+    border: 2px solid whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 90;
+    position: absolute;
+    padding: 3px 20px;
+    top: 80px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 1.5rem;
+
+}
+#searchinput{
+    background-color:black;
+    color: white;
+    width: 340px;
+    padding: 5px 0px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    height: 2.7rem;
+    border-radius: 1.3rem;
+
+}
+
+input::placeholder{
+    color: rgb(215, 215, 215);
+}
+#homelogo{
+    height: 11rem;
+    z-index: 90;
+    position: fixed;
+    top: 45px;
+    left: 10svw;
+    scale: 1.1;
+    transition: all 0.5s cubic-bezier(0.06, 1.25, 1, 1);
+}
+
+#homelogo:hover{
+    scale: 1.12;
+}
+
+#coverimage{
+    display: none;
+    position: fixed;
+    z-index: -1;
+    /* max-height: 60svh; */
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.7;
+}
+#coverimage video{
+    width: 100%;
+}
+
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.content{
+    color: whitesmoke;
+    /* margin-top: 20svh; */
+    margin-top:40svh;
+    /* position: absolute; */
+    /* color: white; */
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+.content p{
+    word-spacing: 0.4rem;
+    letter-spacing: 0.03rem;
+    margin-bottom: 20px;
+    font-size: 25px;
+
+}
+
+
+.content h1, #form h1{
+    font-size: 50px;
+}
+.content .banner{
+    padding: 0px 7svw;
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 60px;
+}
+
+.banner .flexcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 50svw;
+    gap: 20px;
+}
+
+
+.content img{
+    width: 30svw;
+    border-radius: 1rem;
+    scale: 1;
+    transition: scale 0.5s;
+}
+
+.content img:hover{
+    scale: 1.05;
+}
+.pagebreak{
+    content: '';
+    border: 3px solid #565656;
+    width: 110%;
+}
+/* 
+.imgdiv{
+    border-radius: 1rem;
+    display: flex;
+    overflow: hidden;
+    max-height: 10svw;
+} */
+#formdiv{
+    padding: 0px 7svw;
+    margin-top: 7rem;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+} */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40vw;
+    font-size: 1.2rem;
+    min-width: 400px;
+    /* max-width: 600px; */
+}
+
+#actualbody{
+    padding-bottom: 7rem;
+}
+
+.submitWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputWrap {
+    position: relative;
+}
+
+form :nth-child(3) {
+    height: 100%;
+}
+
+form .inputWrap .inputField {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: white;
+    color: black;
+    font-size: 1.2rem;
+}
+
+form .inputWrap .inputField:focus-visible {
+    outline: none;
+}
+
+form .inputWrap .input-textarea {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    aspect-ratio: 4/1;
+    border-radius: 15px;
+    resize: none;
+    background: white;
+    color: black;
+    scrollbar-width: none;
+    font-size: 1.2rem;
+}
+
+form .inputWrap .input-textarea::-webkit-scrollbar {
+    display: none;
+}
+
+form .inputWrap .input-textarea:focus-visible {
+    outline: none;
+}
+
+form .inputWrap label {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    line-height: 1.3rem;
+    font-weight: 500;
+    opacity: 0.3;
+    pointer-events: none;
+    user-select: none;
+    color: black;
+    transition: 0.2s ease;
+}
+
+form .inputWrap .inputField:is(:focus, :valid) ~ label {
+    opacity: 0;
+    font-size: 0.5rem;
+}
+
+form .inputWrap .input-textarea:is(:focus, :valid) ~ label {
+    opacity: 0;
+    font-size: 0.5rem;
+}
+
+form .submitWrap .sendLabel {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    background-color: #e8141c;
+    border-radius: 2rem;
+    padding: 5px;
+    width: 100%;
+}
+
+form .submitWrap .sendLabel img {
+    height: 1.3rem;
+    margin-bottom: -4px;
+}
+
+form .submitWrap .sendLabel h1 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.sendBtn {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: var(--primary-disabled);
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.2s ease;
+}
+form .sendBtn:hover {
+    background-color: var(--primary-disabled);
+}
+
+
+.message {
+    position: relative;
+    width: 40vw;
+    min-width: 400px;
+    /* max-width: 600px; */
+}
+
+ .message h1 {
+    margin: 0;
+    font-size: 2.65rem;
+    transition: 0.2s ease;
+    line-height: 2.5rem;
+    padding-bottom: 10px;
+}
+
+ .message p {
+    margin: 0;
+    font-size: 1.2rem;
+    word-spacing: 0.3rem;
+
+    transition: 0.2s ease;
+}
+
+ .message img {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    transition: 0.2s ease;
+}

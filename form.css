@@ -1,0 +1,340 @@
+#flexrow{ 
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    /* gap: 7rem; */
+    color: whitesmoke;
+}
+
+#footericon img{
+    width: 12rem;
+    margin-bottom: 15px;
+}
+
+.flexcol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px ;
+    align-items: flex-start;
+    max-width: 20svw;
+}
+.flexcol a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.footerheading{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.contacticon{
+    margin: 0px 10px -8px -10px;
+}
+.contactmethods, .servicemethods{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.contactText:hover{
+    cursor: pointer;
+    color: rgb(186, 4, 4);
+}
+
+.contactText:hover > a{
+    cursor: pointer;
+    color: rgb(186, 4, 4);
+}
+
+.pagebreak{
+    margin: 5rem 0px;
+    content: '';
+    border: 3px solid #565656;
+    width: 110%;
+}
+
+#footersocials{
+    display: flex;
+    gap: 18px;
+}
+
+.footersocial img{
+    height: 2rem;
+}
+
+.footersocial:last-child img{
+    height: 2.2rem;
+}
+.flexcol:first-child{
+    align-items: center;
+    position: relative;
+    top: -8px;
+    align-self: center;
+}
+
+.flexcol:last-child{
+    gap: 5px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexcol:last-child strong{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+#blurDiv{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    /* filter: blur(10px); */
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    height: 100svh;
+    width: 100svw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease;
+}
+
+#search{
+    display: none;
+}
+
+
+
+
+
+
+
+#formdiv1{
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+/* form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+} */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40vw;
+    font-size: 1.2rem;
+    min-width: 400px;
+    /* max-width: 600px; */
+}
+
+#actualbody{
+    padding-bottom: 7rem;
+}
+
+.submitWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputWrap {
+    position: relative;
+}
+
+form :nth-child(3) {
+    height: 100%;
+}
+
+form .inputWrap .inputField {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: white;
+    color: black;
+    font-size: 1.2rem;
+}
+
+form .inputWrap .inputField:focus-visible {
+    outline: none;
+}
+
+form .inputWrap .input-textarea {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    aspect-ratio: 4/1;
+    border-radius: 15px;
+    resize: none;
+    background: white;
+    color: black;
+    scrollbar-width: none;
+    font-size: 1.2rem;
+}
+
+form .inputWrap .input-textarea::-webkit-scrollbar {
+    display: none;
+}
+
+form .inputWrap .input-textarea:focus-visible {
+    outline: none;
+}
+
+form .inputWrap label {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    line-height: 1.3rem;
+    font-weight: 500;
+    opacity: 0.3;
+    pointer-events: none;
+    user-select: none;
+    color: black;
+    transition: 0.2s ease;
+}
+
+form .inputWrap .inputField:is(:focus, :valid) ~ label {
+    opacity: 0;
+    font-size: 0.5rem;
+}
+
+form .inputWrap .input-textarea:is(:focus, :valid) ~ label {
+    opacity: 0;
+    font-size: 0.5rem;
+}
+
+form .submitWrap .sendLabel {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    background-color: #e8141c;
+    border-radius: 2rem;
+    padding: 5px;
+    width: 100%;
+}
+
+form .submitWrap .sendLabel img {
+    height: 1.3rem;
+    margin-bottom: -4px;
+}
+
+form .submitWrap .sendLabel h1 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.sendBtn {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: var(--primary-disabled);
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.2s ease;
+}
+form .sendBtn:hover {
+    background-color: var(--primary-disabled);
+}
+
+
+.message {
+    position: relative;
+    width: 40vw;
+    min-width: 400px;
+    pointer-events: none;
+    user-select: none;
+}
+
+ .message h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    transition: 0.2s ease;
+    line-height: 2.5rem;
+    padding-bottom: 10px;
+}
+
+ .message p {
+    margin: 0;
+    font-size: 1.2rem;
+    word-spacing: 0.3rem;
+
+    transition: 0.2s ease;
+}
+
+ .message img {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    transition: 0.2s ease;
+}
+
+
+#nav{
+    display: none;
+}
+
+
+#threedots{
+    display: none;
+}
+@media only screen and (max-width: 450px) {
+    nav{
+        display: none;
+    }
+    #nav {
+        color: whitesmoke;
+        background-color: black;
+        z-index: 99;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100svh;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0.7rem 0rem 3rem 3rem;
+        transition: transform 0.5s, opacity 0.5s;
+        transform: translateY(0); /* Initial state */
+        opacity: 1; /* Initial state */
+    }
+    #nav.hidden {
+        transform: translateY(-100%); /* Move out of view */
+        opacity: 0; /* Fade out */
+    }
+    #nav a{
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 1.6rem;
+        font-weight: 700;
+        transition: all 0.5s;
+    }
+    #nav img{
+        height: 30px;
+        margin:10px;
+        align-self: flex-end;
+    }
+    #threedots{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px 20px;
+        display: block;
+    }
+}
